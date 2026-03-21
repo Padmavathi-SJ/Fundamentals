@@ -1,0 +1,48 @@
+/* Hide Radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Tab Labels */
+.tab-labels {
+    display: flex;
+}
+
+.tab-labels label {
+cursor: pointer;
+background-color: #ddd;
+border-radius: 5px;
+padding: 10px 20px;
+
+}
+
+/* Active Tab */
+#tab1:checked ~ .tab-labels label[for="tab1"],
+#tab2:checked ~ .tab-labels label[for="tab2"],
+#tab3:checked ~ .tab-labels label[for="tab3"] {
+    background-color: #333;
+    color: white;
+}
+
+/* Content box */
+.tab-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.content {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* show selected content */
+#tab1:checked ~ .tab-content .content1,
+#tab2:checked ~ .tab-content .content2,
+#tab3:checked ~ .tab-content .content3 {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
