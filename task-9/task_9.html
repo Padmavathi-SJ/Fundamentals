@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="task_9.css">
+</head>
+<body>
+    
+    <!-- Sticky Header -->
+     <header class="header">
+        <h2>My Website</h2>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+     </header>
+
+     <!-- Main Grid Layout -->
+      <div class="container">
+
+        <!-- Sidebar -->
+         <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <ul>
+                <li>Dashboard</li>
+                <li>Profile</li>
+                <li>Settings</li>
+            </ul>
+         </aside>
+
+         <!-- Main Content -->
+          <main class="main">
+            
+            <!-- Card Section (Flexbox inside Grid)-->
+             <div class="cards">
+                <div class="card">Card 1</div>
+                <div class="card highlight">Card 2</div>
+                <div class="card">Card 3</div>
+             </div>
+
+             <!-- Overlapping Section -->
+              <div class="overlap-container">
+                <div class="box box1">Box 1</div>
+                <div class="box box2">Box 2 (Overlapping)</div>
+              </div>
+
+          </main>
+          
+      </div>
+</body>
+</html>
