@@ -1,0 +1,45 @@
+/* Resetting */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.accordin {
+    width: 60%;
+    margin: 50px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.accordin input {
+    display: none;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.accordin label {
+    display: block;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.content {
+    padding: 0 15px;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+/* when checked -> expand content */
+.accordin input:checked ~ .content {
+    max-height: 200px;
+    padding: 15px;
+}
