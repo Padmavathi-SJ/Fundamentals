@@ -24,11 +24,11 @@ def run():
         
         delay() # add delay between requests to mimic human behavior and avoid bot detection
 
-        save_products(all_products) # save all products to daatabase
+    save_products(all_products) # save all products to daatabase
 
-        log(f"Total:{len(all_products)} products saved") # log total number of products saved to database
+    log(f"Total:{len(all_products)} products saved") # log total number of products saved to database
 
-        changes = get_price_changes() # fetch price changes from database
+    changes = get_price_changes() # fetch price changes from database
 
     print("\n=== Price Change Report ===") # print header for price change report
     for name, old, new in changes: # iterate through price changes and print product name, old price, new price and % change
@@ -38,4 +38,4 @@ def run():
     generate_report(changes) # generate csv report of price changes
 
 if __name__ == "__main__": # check if script is run directly (not imported as a module) and call run function
-    run() # start the scraper when the script is executed
+    run() # start the scraper when the script is executed(Ensures run() only executes when I run main.py directly, noe when imported elsewhere)

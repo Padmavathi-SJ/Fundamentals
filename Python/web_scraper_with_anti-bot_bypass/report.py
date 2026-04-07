@@ -15,9 +15,9 @@ def generate_report(changes):
    
     df = pd.DataFrame(data, columns=["Product", "Old Price", "New Price", "Change %"])
 
-    os.makedirs("reports", exist_ok=True) #create folder if not exists
+    os.makedirs("reports", exist_ok=True) #create folder safely if not exists
     filename = f"reports/{date.today()}.csv"
     
-    df.to_csv(filename, index=False) #save dataframe to csv without index
+    df.to_csv(filename, index=False) #save dataframe to csv without index(without row numbers)
 
     print(f"Report saved to {filename}")
