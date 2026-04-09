@@ -1,29 +1,33 @@
-import time  # for time tracking
+import time
 
-# store request timestamps per API key
 buckets = {}
 
-RATE_LIMIT = 5      # max 5 requests
-TIME_WINDOW = 60    # per 60 seconds
+RATE = 10       # allow 10 requests
+WINDOW = 60     # per 60 seconds
 
 def is_allowed(api_key):
-    now = time.time()  # current time
+    now = time.time()
 
-    # create bucket if new user
+    # create bucket if not exists
     if api_key not in buckets:
-        buckets[api_key] = []
+        buckets[api_key] = {
+            "tokens": RATE,
+            "last": now
+        }
 
-    # remove old timestamps outside window
-    buckets[api_key] = [
-        t for t in buckets[api_key]
-        if now - t < TIME_WINDOW
-    ]
+    bucket = buckets[api_key]
 
-    # check limit
-    if len(buckets[api_key]) >= RATE_LIMIT:
-        return False  # limit exceeded
+    # refill tokens based on elapsed time
+    elapsed = now - bucket["last"]
+    refill = (elapsed / WINDOW) * RATE
 
-    # add current request
-    buckets[api_key].append(now)
+    bucket["tokens"] = min(RATE, bucket["tokens"] + refill)
+    bucket["last"] = now
 
-    return True  # allowed
+    # check availability
+    if bucket["tokens"] < 1:
+        return False
+
+    # consume token
+    bucket["tokens"] -= 1
+    return True

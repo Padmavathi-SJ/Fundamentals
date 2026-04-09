@@ -6,14 +6,14 @@ def get_cache(key):
     if key in cache_store:
         value, expiry = cache_store[key]
 
-        # check if still valid
-        if time.time() < expiry:
-            return value  # cache hit
-        
+        remaining = expiry - time.time()
+
+        if remaining > 0:
+            return value, round(remaining)
         else:
-            del cache_store[key]  # remove expired
+            del cache_store[key]
     
-    return None  # cache miss
+    return None, 0  # cache miss
 
 def set_cache(key, value, ttl=30):
     expiry = time.time() + ttl # set expiry time
