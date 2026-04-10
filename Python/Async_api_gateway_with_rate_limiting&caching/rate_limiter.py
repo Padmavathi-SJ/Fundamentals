@@ -1,33 +1,53 @@
 import time
 
+# Dictionary to store token buckets for each API key
+# Structure: {"api_key_123": {"token": 10, "last": timestamp}}
 buckets = {}
 
-RATE = 10       # allow 10 requests
-WINDOW = 60     # per 60 seconds
+# Rate limiting configuration
+RATE = 10       # Number of requests allowed
+WINDOW = 60     # Time window in seconds (10 requests per 60 seconds)
 
 def is_allowed(api_key):
-    now = time.time()
+    """
+    Token bucket rate limiter
+    Returns Ture if request is allowed, False if rate limited
+    
+    How Token Bucket works:
+    1. Bucket holds up to RATE tokens
+    2. Tokens refill at rate of RATE/WINDOW per second
+    3. Each request consumes 1 token
+    4. If no tokens available -> rate limited
+    """
+    now = time.time()  # current timestamp
 
-    # create bucket if not exists
+    # First request from this API key - create new bucket if not exists
     if api_key not in buckets:
         buckets[api_key] = {
-            "tokens": RATE,
-            "last": now
+            "tokens": RATE,  # start with full bucket
+            "last": now      # Lat refill time
         }
 
     bucket = buckets[api_key]
 
-    # refill tokens based on elapsed time
-    elapsed = now - bucket["last"]
+    # Calculate how many tokens to add based on time elapsed
+    elapsed = now - bucket["last"] # seconds since last refill
+    
+    # Refill rate = (elapsed seconds / window seconds) * rate
+    # ex: 10 seconds elapsed, 60 seconds window, 10 rate
+    # ( 10 / 60 )* 10 = 1.67 tokens to add
     refill = (elapsed / WINDOW) * RATE
 
+    # Add tokens but never exceed maximum RATE
     bucket["tokens"] = min(RATE, bucket["tokens"] + refill)
+    
+    # Update last refill time
     bucket["last"] = now
 
-    # check availability
+    # check if we have atleast 1 token available
     if bucket["tokens"] < 1:
-        return False
+        return False  # Rate limited - no tokens left
 
-    # consume token
+    # consume 1 token for this request
     bucket["tokens"] -= 1
-    return True
+    return True  # Request allowed
