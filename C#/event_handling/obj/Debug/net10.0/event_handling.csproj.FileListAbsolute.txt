@@ -1,0 +1,15 @@
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.GeneratedMSBuildEditorConfig.editorconfig
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.AssemblyInfoInputs.cache
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.AssemblyInfo.cs
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.csproj.CoreCompileInputs.cache
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.sourcelink.json
+E:\Presidio-Tasks\python\event_handling\bin\Debug\net10.0\event_handling.exe
+E:\Presidio-Tasks\python\event_handling\bin\Debug\net10.0\event_handling.deps.json
+E:\Presidio-Tasks\python\event_handling\bin\Debug\net10.0\event_handling.runtimeconfig.json
+E:\Presidio-Tasks\python\event_handling\bin\Debug\net10.0\event_handling.dll
+E:\Presidio-Tasks\python\event_handling\bin\Debug\net10.0\event_handling.pdb
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.dll
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\refint\event_handling.dll
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.pdb
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\event_handling.genruntimeconfig.cache
+E:\Presidio-Tasks\python\event_handling\obj\Debug\net10.0\ref\event_handling.dll
