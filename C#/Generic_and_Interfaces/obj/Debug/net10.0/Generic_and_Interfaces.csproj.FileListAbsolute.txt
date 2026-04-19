@@ -1,0 +1,15 @@
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.AssemblyInfoInputs.cache
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.AssemblyInfo.cs
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.csproj.CoreCompileInputs.cache
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.sourcelink.json
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\bin\Debug\net10.0\Generic_and_Interfaces.exe
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\bin\Debug\net10.0\Generic_and_Interfaces.deps.json
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\bin\Debug\net10.0\Generic_and_Interfaces.runtimeconfig.json
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\bin\Debug\net10.0\Generic_and_Interfaces.dll
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\bin\Debug\net10.0\Generic_and_Interfaces.pdb
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.dll
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\refint\Generic_and_Interfaces.dll
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.pdb
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\Generic_and_Interfaces.genruntimeconfig.cache
+E:\Presidio-Tasks\C#\Generic_and_Interfaces\obj\Debug\net10.0\ref\Generic_and_Interfaces.dll
